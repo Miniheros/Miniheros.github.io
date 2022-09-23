@@ -661,7 +661,7 @@ input[type="radio"] {
       text-rendering: auto;
       line-height: 1;
       text-transform: none !important;
-      font-family: 'Font Awesome 5 Free';
+      font-family: 'Lobster';
       font-weight: 900; }
     input[type="checkbox"] + label:before,
     input[type="radio"] + label:before {
