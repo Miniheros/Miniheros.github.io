@@ -1,0 +1,235 @@
+/* =========================================================
+   pattern.css — Complete Exam Pattern (full-screen view)
+   Uses existing theme tokens from style.css
+   ========================================================= */
+
+.view--pattern { position: relative; }
+
+/* scroll progress bar (top of view) */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, var(--amber), var(--green));
+  z-index: 60;
+  transition: width 0.1s linear;
+}
+
+/* sticky section nav */
+.pattern-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.7rem clamp(1rem, 4vw, 2.5rem);
+  background: var(--surface);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.pnav-link {
+  flex-shrink: 0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.2s var(--ease);
+  white-space: nowrap;
+}
+.pnav-link:hover { color: var(--text); border-color: var(--border-strong); }
+.pnav-link.is-active { background: var(--amber); color: #2a1c08; }
+
+/* scroll container */
+.pattern-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.6rem clamp(1rem, 4vw, 2rem) 5rem;
+  height: calc(100vh - 64px - 52px); /* minus topbar + nav */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.pattern-wrap::-webkit-scrollbar { width: 9px; }
+.pattern-wrap::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+
+.pattern-intro {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+/* sections */
+.pattern-section { margin-bottom: 3rem; scroll-margin-top: 90px; }
+.pattern-h {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+.pattern-h-icon { font-size: 1.4rem; }
+.pattern-desc { color: var(--text-dim); margin-bottom: 1.2rem; line-height: 1.55; }
+
+/* reveal animation */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* card grids */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.2rem 0; }
+.card-grid--exp { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.pcard {
+  border-radius: var(--radius-lg);
+  padding: 1.3rem;
+  transition: transform 0.25s var(--ease), border-color 0.25s;
+}
+.pcard:hover { transform: translateY(-4px); border-color: var(--amber); }
+.pcard-h { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem; }
+.pcard--q { text-align: center; }
+.q-big { font-family: var(--font-mono); font-size: 1.8rem; font-weight: 700; color: var(--amber); margin-top: 0.3rem; }
+
+/* chip lists */
+.chip-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.chip-list li {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.chip-list li:hover { border-color: var(--amber); transform: translateY(-2px); }
+
+/* marking scheme rows */
+.mark-rows { display: flex; flex-direction: column; gap: 0.7rem; }
+.mark-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.mark-label { font-weight: 600; min-width: 90px; }
+
+/* badges (color-coded) */
+.badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.badge--merit { background: rgba(224,164,88,0.18); color: var(--amber); border: 1px solid rgba(224,164,88,0.45); }
+.badge--qual { background: rgba(88,124,224,0.18); color: #8aa6ff; border: 1px solid rgba(88,124,224,0.45); }
+.badge--good { background: rgba(47,158,107,0.18); color: var(--green-chip-text); border: 1px solid rgba(47,158,107,0.45); }
+.badge--bad { background: rgba(224,99,90,0.16); color: #e9837b; border: 1px solid rgba(224,99,90,0.4); }
+.badge--total { background: linear-gradient(135deg, var(--amber), var(--green)); color: #2a1c08; font-size: 0.82rem; padding: 0.35rem 0.8rem; }
+
+/* expandable detail cards */
+.exp-card { border-radius: var(--radius); overflow: hidden; }
+.exp-head {
+  list-style: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.2rem;
+  font-family: var(--font-display); font-weight: 600; font-size: 1.02rem;
+}
+.exp-head::-webkit-details-marker { display: none; }
+.exp-arrow { color: var(--text-dim); transition: transform 0.3s var(--ease); }
+.exp-card[open] .exp-arrow { transform: rotate(180deg); }
+.exp-card[open] .exp-head { color: var(--amber); border-bottom: 1px solid var(--border); }
+.exp-body { padding: 1rem 1.2rem 1.2rem; }
+
+/* alert / info box */
+.alert-box {
+  display: flex; gap: 0.8rem;
+  background: rgba(224, 184, 64, 0.12);
+  border: 1px solid rgba(224, 184, 64, 0.4);
+  border-left: 4px solid #e0b840;
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  margin-top: 1.2rem;
+}
+.alert-icon { font-size: 1.3rem; flex-shrink: 0; }
+.alert-list { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.alert-list li { position: relative; padding-left: 1.1rem; line-height: 1.5; font-size: 0.92rem; }
+.alert-list li::before { content: "•"; position: absolute; left: 0.2rem; color: #e0b840; font-weight: 700; }
+.alert-list strong { color: #e0b840; }
+
+/* tables (reuse exam-table from popup.css, plus merit highlight) */
+.exam-table--merit tbody .merit-row td {
+  background: linear-gradient(135deg, rgba(224,164,88,0.2), rgba(47,158,107,0.2));
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.exam-table--merit tbody .merit-row td strong { color: var(--amber); }
+
+.pattern-top { display: block; margin: 1rem auto 0; }
+
+/* =========================================================
+   Mains Progress — cards & topic buttons
+   ========================================================= */
+.mcard {
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+.mtopic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.mtopic {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  text-align: left;
+  background: var(--bg-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  color: var(--text);
+  font-family: var(--font-body);
+  min-width: 0;
+  overflow: hidden;
+  transition: transform 0.2s var(--ease), border-color 0.2s, box-shadow 0.2s;
+}
+.mtopic:hover { transform: translateY(-3px); border-color: var(--amber); box-shadow: 0 12px 28px -14px rgba(0,0,0,0.5); }
+.mtopic:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.mtopic-icon { font-size: 1.4rem; flex-shrink: 0; line-height: 1.4; }
+.mtopic-body { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; flex: 1; }
+.mtopic-label { font-weight: 600; font-size: 0.95rem; line-height: 1.3; overflow-wrap: anywhere; word-break: break-word; }
+.mtopic-count {
+  align-self: flex-start;
+  max-width: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--amber);
+  background: rgba(224,164,88,0.12);
+  border: 1px solid rgba(224,164,88,0.35);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  white-space: nowrap;
+}
+/* single-topic cards (Essay) — make the one topic full-width feel */
+.mcard .mtopic-grid:has(.mtopic:only-child) { grid-template-columns: 1fr; }
+
+/* Syllabus shortcut in Mains nav */
+.pnav-syllabus {
+  border: 1px solid var(--amber) !important;
+  color: var(--amber) !important;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+.pnav-syllabus:hover { background: rgba(224,164,88,0.14) !important; }

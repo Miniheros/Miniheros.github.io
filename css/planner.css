@@ -1,0 +1,436 @@
+/* =========================================================
+   planner.css — Weekly Planner, Day tasks, Pending,
+   and Last Visited.
+   Reuses core tokens/classes; scoped so nothing else changes.
+   ========================================================= */
+
+/* ---------- menu grid width for planner card ---------- */
+
+/* =========================================================
+   Weekly Planner — stacked weeks, horizontal day cards
+   ========================================================= */
+.planner-weeks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.planner-week {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.1rem 1.2rem;
+  background: var(--surface);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.planner-week.is-complete { border-color: rgba(47,158,107,0.45); }
+
+.planner-week-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.planner-week-title { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.planner-week-label { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+.planner-week-range { font-family: var(--font-mono); font-size: 0.76rem; color: var(--text-dim); }
+
+.planner-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--amber);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.planner-badge--done {
+  color: var(--green-chip-text);
+  border-color: rgba(47,158,107,0.5);
+  background: rgba(47,158,107,0.12);
+}
+
+.planner-progress { display: flex; align-items: center; gap: 0.6rem; }
+.planner-progress .linebar { flex: 1; }
+.planner-progress-pct {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  min-width: 2.6rem;
+  text-align: right;
+}
+
+.planner-days {
+  display: flex;
+  flex-direction: row;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding-bottom: 0.4rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.planner-days::-webkit-scrollbar { height: 7px; }
+.planner-days::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+.planner-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  flex: 1 0 auto;
+  min-width: 86px;
+  text-align: center;
+  padding: 0.8rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  border-top: 3px solid var(--amber);
+  background: var(--bg-2);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.18s var(--ease), border-color 0.18s, background 0.18s;
+}
+.planner-day:hover { transform: translateY(-3px); border-color: var(--amber); }
+.planner-day.is-empty { border-top-color: var(--border-strong); opacity: 0.82; }
+.planner-day.is-done {
+  border-top-color: var(--green);
+  background: rgba(47,158,107,0.10);
+}
+.planner-day-name { font-weight: 600; font-size: 0.9rem; }
+.planner-day-date {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.planner-day.is-empty .planner-day-date { color: var(--text-dim); }
+.planner-day-count {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-dim);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+.planner-day.is-done .planner-day-count { color: var(--green-chip-text); border-color: rgba(47,158,107,0.4); }
+
+/* =========================================================
+   Pending tasks
+   ========================================================= */
+.planner-pending {
+  margin-top: 1.6rem;
+  padding-top: 1.3rem;
+  border-top: 1px dashed var(--border-strong);
+}
+.planner-pending-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.planner-pending-count {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: #2a1c08;
+  background: var(--amber);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+.planner-pending-hint { color: var(--text-dim); font-size: 0.86rem; margin: 0.3rem 0 0.9rem; }
+
+.planner-pending-list { display: flex; flex-direction: column; gap: 0.7rem; }
+.pending-empty {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.1rem;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  background: var(--bg-2);
+}
+.pending-empty-icon { font-size: 1.2rem; flex-shrink: 0; }
+.pending-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+.pending-main { min-width: 0; flex: 1; }
+.pending-title { display: block; font-weight: 600; font-size: 0.98rem; }
+.pending-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.45rem; }
+.pending-actions { display: flex; gap: 0.5rem; flex-shrink: 0; }
+
+/* =========================================================
+   Day modal — task list
+   ========================================================= */
+.day-add {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.day-add-times { display: flex; gap: 0.7rem; }
+.day-time-field { flex: 1; display: flex; flex-direction: column; gap: 0.35rem; }
+.day-time-field .field-label { margin-bottom: 0; }
+.day-week-total { color: var(--amber); }
+
+.day-tasklist { display: flex; flex-direction: column; gap: 0.55rem; }
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-2);
+  transition: border-color 0.18s, opacity 0.2s;
+  animation: noteIn 0.3s var(--ease);
+}
+.task-row.is-done { opacity: 0.72; }
+.task-row.is-done .task-title { text-decoration: line-through; color: var(--text-dim); }
+.task-check {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-dim);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.task-row.is-done .task-check { color: var(--green); }
+.task-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+.task-title { font-weight: 600; font-size: 0.95rem; }
+.task-time { font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-faint); }
+
+/* =========================================================
+   Last Visited
+   ========================================================= */
+.lastvis-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.lastvis-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.18s var(--ease), border-color 0.18s;
+}
+.lastvis-item:hover { transform: translateX(3px); border-color: var(--amber); }
+.lastvis-item:hover .module-go { transform: translateX(4px); color: var(--text); }
+.lastvis-emoji { font-size: 1.4rem; flex-shrink: 0; }
+.lastvis-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.lastvis-label { font-weight: 600; font-size: 0.98rem; }
+.lastvis-time { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); }
+
+/* =========================================================
+   Prelims — Mock Scores
+   ========================================================= */
+.mscore-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+.mscore-summary { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.mscore-summary-empty { color: var(--text-dim); font-size: 0.9rem; }
+.mscore-stat { display: flex; flex-direction: column; gap: 0.1rem; }
+.mscore-stat-label { font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-faint); }
+.mscore-stat-val { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--text); }
+
+.mscore-list { display: flex; flex-direction: column; gap: 0.7rem; }
+.mscore-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  animation: noteIn 0.3s var(--ease);
+}
+.mscore-card-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  padding-right: 1rem;
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.mscore-card-value { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--amber); line-height: 1.1; }
+.mscore-max { font-size: 0.85rem; color: var(--text-dim); font-weight: 500; }
+.mscore-card-date { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-top: 0.25rem; }
+.mscore-card-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.35rem; justify-content: center; }
+.mscore-card-name { font-weight: 600; font-size: 1rem; }
+.mscore-card-name--dim { color: var(--text-dim); font-weight: 500; font-style: italic; }
+.mscore-card-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mscore-card-notes { font-size: 0.85rem; color: var(--text-dim); margin: 0.15rem 0 0; }
+.mscore-card-actions { display: flex; flex-direction: column; gap: 0.4rem; justify-content: center; }
+
+/* mock score entry form */
+.mscore-form { display: flex; flex-direction: column; gap: 0.9rem; }
+.mscore-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.mscore-field .field-label { margin-bottom: 0; }
+.mscore-field-row { display: flex; gap: 0.8rem; }
+.mscore-field-row .mscore-field { flex: 1; }
+.field-input--err { border-color: var(--danger, #e0574f) !important; box-shadow: 0 0 0 3px rgba(224,87,79,0.18); }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 700px) {
+  .day-add-times { flex-direction: column; }
+  .pending-actions { width: 100%; }
+  .pending-actions .btn { flex: 1; }
+  .mscore-field-row { flex-direction: column; }
+  .mscore-card { flex-wrap: wrap; }
+  .mscore-card-score { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 0.6rem; min-width: 100%; flex-direction: row; gap: 0.6rem; }
+}
+
+/* =========================================================
+   Exam Plan — 2028 button, marks, warnings, banner, settings
+   ========================================================= */
+
+/* --- blinking countdown banner (menu top) --- */
+.exam-banner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(224,120,88,0.5);
+  background: rgba(224,120,88,0.12);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: bannerBlink 1.15s ease-in-out infinite;
+}
+.exam-banner--today {
+  border-color: rgba(224,80,72,0.75);
+  background: rgba(224,80,72,0.18);
+  animation: bannerBlinkUrgent 0.85s ease-in-out infinite;
+}
+.exam-banner-text { display: inline-block; }
+@keyframes bannerBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes bannerBlinkUrgent {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.99); }
+}
+/* the menu-body has top padding for the fixed backup button; when a banner
+   is visible it sits above the body naturally (normal flow) */
+.view--menu .exam-banner:not([hidden]) { margin-top: 0.8rem; margin-bottom: 0.2rem; }
+
+/* --- 2028 plan block --- */
+.plan2028 { margin: 1.3rem 0 0.4rem; }
+.plan2028-note { text-align: center; color: var(--text-dim); font-size: 0.82rem; margin-top: 0.5rem; }
+.plan2028-warn {
+  color: #e0635a; font-size: 0.86rem; margin: 0.4rem 0 0.2rem; text-align: center;
+}
+.plan2028-actions { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none !important; box-shadow: none; }
+
+/* --- marks section --- */
+.marks-section {
+  margin-top: 1.6rem;
+  padding-top: 1.3rem;
+  border-top: 1px dashed var(--border-strong);
+}
+.marks-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; }
+.marks-hint { color: var(--text-dim); font-size: 0.86rem; margin: 0.3rem 0 1rem; }
+.marks-block {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--bg-2);
+}
+.marks-block-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+.marks-block-title { font-size: 1rem; font-weight: 600; }
+.marks-lock {
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600;
+  color: var(--text-dim); border: 1px solid var(--border-strong);
+  border-radius: 999px; padding: 0.15rem 0.55rem;
+}
+.marks-lock.is-open { color: var(--green-chip-text); border-color: rgba(47,158,107,0.5); }
+.marks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+.marks-field { display: flex; flex-direction: column; gap: 0.35rem; }
+.marks-field .field-label { margin-bottom: 0; }
+.field-input:disabled { opacity: 0.5; cursor: not-allowed; }
+.marks-total {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 0.9rem; padding-top: 0.8rem; border-top: 1px solid var(--border);
+}
+.marks-total-label { color: var(--text-dim); font-size: 0.86rem; }
+.marks-total-val { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--amber); }
+
+/* --- settings toggle --- */
+.setting-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.setting-text { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
+.setting-name { font-weight: 600; font-size: 1rem; }
+.setting-desc { color: var(--text-dim); font-size: 0.84rem; line-height: 1.45; }
+.toggle-switch {
+  position: relative; flex-shrink: 0;
+  width: 52px; height: 30px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-2);
+  cursor: pointer;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.toggle-knob {
+  position: absolute; top: 3px; left: 3px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--text-dim);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+}
+.toggle-switch.is-on { background: linear-gradient(135deg, var(--amber), var(--amber-soft)); border-color: transparent; }
+.toggle-switch.is-on .toggle-knob { transform: translateX(22px); background: #2a1c08; }
+
+/* --- warning popup --- */
+.warn-modal {
+  max-width: 420px; text-align: center;
+  padding: 2.1rem 1.9rem 1.9rem;
+  align-items: center;
+}
+.warn-emoji { font-size: 3rem; line-height: 1; margin-bottom: 0.8rem; animation: greetPop 0.5s var(--ease); }
+.warn-title { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; margin-bottom: 0.6rem; }
+.warn-msg { color: var(--text-dim); font-size: 0.96rem; line-height: 1.55; margin-bottom: 1.5rem; }
+@keyframes greetPop {
+  0% { transform: scale(0.4); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  .marks-grid { grid-template-columns: 1fr; }
+  .exam-banner { font-size: 0.86rem; padding: 0.6rem 0.8rem; }
+}

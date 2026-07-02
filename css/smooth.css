@@ -1,0 +1,244 @@
+/* =========================================================
+   smooth.css — Apple-grade smoothness & mobile compatibility
+   Loaded LAST. Purely additive polish; overrides nothing
+   structural. Safe on every browser (graceful fallbacks).
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. Global rendering & scroll smoothness
+   --------------------------------------------------------- */
+html {
+  -webkit-text-size-adjust: 100%;   /* stop iOS auto-zooming text */
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent; /* remove grey tap flash */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* prevent the whole page from rubber-band scroll-chaining (a common
+     cause of "stuck"/janky feeling and accidental navigation on iOS) */
+  overscroll-behavior-y: none;
+}
+
+/* Momentum scrolling + no scroll-chaining on every scrollable region */
+.pattern-wrap,
+.info-body,
+.modal,
+.chapter-list,
+.filter-row,
+.planner-days,
+.mscore-list,
+.setlist,
+.tracker-body,
+.menu-body,
+.backup-panel,
+.ptabs {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Horizontal scrollers should not fight vertical page scroll */
+.filter-row,
+.planner-days,
+.ptabs,
+.pattern-nav {
+  touch-action: pan-x;
+  scrollbar-width: thin;
+}
+/* let vertical lists scroll naturally */
+.info-body,
+.modal,
+.pattern-wrap,
+.chapter-list,
+.setlist,
+.mscore-list,
+.tracker-body {
+  touch-action: pan-y;
+}
+
+/* Thin, unobtrusive scrollbars (WebKit) that match the theme */
+.pattern-wrap::-webkit-scrollbar,
+.info-body::-webkit-scrollbar,
+.modal::-webkit-scrollbar,
+.tracker-body::-webkit-scrollbar { width: 8px; height: 8px; }
+.pattern-wrap::-webkit-scrollbar-thumb,
+.info-body::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb,
+.tracker-body::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 999px;
+}
+.pattern-wrap::-webkit-scrollbar-track,
+.info-body::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track { background: transparent; }
+
+/* ---------------------------------------------------------
+   2. Apple-like press feedback (works with resilience.js)
+   Instant, springy, and consistent across touch + mouse.
+   --------------------------------------------------------- */
+.btn, .module-card, .subject-card, .set-card, .about-tile,
+.ptab, .planner-day, .lastvis-item, .mscore-card, .chip,
+.pnav-link, .icon-btn, .modal-close, .theme-toggle,
+.set-add, .btn-complete {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  will-change: transform;
+}
+
+/* the instant press-down state set by resilience.js on touchstart */
+.is-pressed { transform: scale(0.96) !important; transition: transform 0.08s var(--ease) !important; }
+.module-card.is-pressed,
+.subject-card.is-pressed,
+.set-card.is-pressed,
+.mscore-card.is-pressed { transform: scale(0.985) !important; }
+
+/* smoother, more "physical" spring on interactive cards */
+.module-card, .about-tile, .subject-card, .lastvis-item, .planner-day {
+  transition: transform 0.32s var(--ease), border-color 0.24s var(--ease),
+              box-shadow 0.3s var(--ease), background 0.24s var(--ease);
+}
+
+/* ---------------------------------------------------------
+   3. Buttery view + modal transitions
+   --------------------------------------------------------- */
+.view.is-active { animation: viewInSmooth 0.55s var(--ease); }
+@keyframes viewInSmooth {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+/* modal backdrop fade + panel spring (layers over popup.css) */
+.modal-backdrop {
+  transition: opacity 0.34s var(--ease);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+/* Enhance ONLY the spring easing of the panel. Visibility is driven by
+   the backdrop's opacity + popup.css's transform, exactly as before —
+   we never add our own opacity to .modal so a panel can't get stuck hidden. */
+.modal {
+  transition: transform 0.42s var(--ease);
+  backface-visibility: hidden;
+}
+
+/* toast slide is already handled; just ensure it composites cleanly */
+.toast { will-change: transform, opacity; }
+
+/* ---------------------------------------------------------
+   4. Safe-area insets for notched iPhones (viewport-fit=cover)
+   --------------------------------------------------------- */
+.theme-toggle {
+  top: calc(1.1rem + env(safe-area-inset-top, 0px));
+  right: calc(1.1rem + env(safe-area-inset-right, 0px));
+}
+.scroll-top {
+  bottom: calc(1.4rem + env(safe-area-inset-bottom, 0px)) !important;
+  right: calc(1.4rem + env(safe-area-inset-right, 0px)) !important;
+}
+.topbar {
+  padding-top: max(0.9rem, env(safe-area-inset-top, 0px));
+}
+/* fixed backup widget (top-left) already sits below the bar; nudge it
+   down by the notch inset only, preserving its existing top offset */
+.is-ios .backup-widget { margin-top: env(safe-area-inset-top, 0px); }
+
+/* full-height panes use the JS-measured --vh so they never clip under
+   the mobile URL bar (falls back to vh where --vh is unset) */
+@supports (height: 1px) {
+  .view { min-height: calc(var(--vh, 1vh) * 100); }
+}
+
+/* ---------------------------------------------------------
+   5. Mobile ergonomics — comfortable tap targets & no overflow
+   --------------------------------------------------------- */
+@media (max-width: 760px) {
+  /* stop any accidental horizontal scrolling of the whole page */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+  /* comfortable minimum hit areas (Apple HIG ~44px) */
+  .btn--sm { min-height: 40px; }
+  .icon-btn { min-width: 40px; min-height: 40px; }
+  .ptab { min-height: 42px; }
+  .modal-close { width: 40px; height: 40px; }
+
+  /* inputs at 16px+ so iOS never zooms when focusing a field */
+  .field-input, .search-input, input, select, textarea { font-size: 16px !important; }
+
+  /* tab strips & filter rows: smooth horizontal swipe, hidden scrollbar */
+  .ptabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.3rem;
+    scroll-snap-type: x proximity;
+  }
+  .ptab { flex: 0 0 auto; scroll-snap-align: start; }
+  .ptabs::-webkit-scrollbar, .filter-row::-webkit-scrollbar { display: none; }
+  .ptabs { scrollbar-width: none; }
+
+  /* modals: full-width sheet feel, never taller than the safe viewport */
+  .modal {
+    max-height: calc(var(--vh, 1vh) * 92);
+    width: 100%;
+  }
+  .info-modal--wide { width: 100%; }
+
+  /* planner two-week + day cards breathe better */
+  .planner-day { min-width: 74px; }
+
+  /* mock score summary wraps cleanly */
+  .mscore-summary { gap: 1rem; }
+}
+
+@media (max-width: 420px) {
+  .btn--lg { padding: 0.85rem 1.6rem; font-size: 1rem; }
+  .modal-subject { font-size: 1.25rem; }
+  .planner-day { min-width: 66px; padding: 0.7rem 0.45rem; }
+}
+
+/* ---------------------------------------------------------
+   6. Fixed-position rendering safety on mobile
+   Some Android/iOS builds mis-paint blurred fixed layers during
+   scroll. Force clean compositing on the ambient layers.
+   --------------------------------------------------------- */
+.bg-aurora {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* prevent long-press text selection flicker on interactive chrome */
+.topbar, .ptabs, .pattern-nav, .module-foot, .module-go {
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* but always allow selecting real content (notes, answers, etc.) */
+.info-body p, .set-title, .note-text, .mscore-card-notes,
+.pattern-desc, .pattern-intro, .field-input, textarea, input {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* ---------------------------------------------------------
+   7. Reduced-motion: pare transitions back further than base
+   (base file already zeroes animations; we also calm the new ones)
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .modal, .modal-backdrop, .view.is-active { transition: none !important; animation: none !important; }
+  .is-pressed { transition: none !important; }
+  .bg-aurora { will-change: auto; }
+}
+
+/* ---------------------------------------------------------
+   8. Touch devices: neutralise sticky hover transforms
+   (hover doesn't exist on touch; the press class handles feedback)
+   --------------------------------------------------------- */
+.is-touch .btn--primary:hover { transform: none; }
+.is-touch .module-card:hover,
+.is-touch .subject-card:hover,
+.is-touch .about-tile:hover,
+.is-touch .lastvis-item:hover,
+.is-touch .planner-day:hover { transform: none; }

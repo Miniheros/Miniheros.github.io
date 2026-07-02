@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f4f2ee" media="(prefers-color-scheme: light)" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="A premium CSE (Civil Services Examination) preparation progress tracker — track every subject chapter-wise." />
+  <title>CSE Progress Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/popup.css" />
+  <link rel="stylesheet" href="css/pattern.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/planner.css" />
+  <link rel="stylesheet" href="css/smooth.css" />
+</head>
+<body>
+  <!-- Ambient background -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <!-- Theme toggle (persists across all views) -->
+  <button id="themeToggle" class="theme-toggle" title="Toggle theme (T)" aria-label="Toggle dark and light mode">
+    <span class="theme-icon-sun">☀</span>
+    <span class="theme-icon-moon">☾</span>
+  </button>
+
+  <!-- ============ VIEW 1: INTRO + LOGIN ============ -->
+  <section class="view view--intro is-active" id="view-intro">
+    <div class="intro-wrap">
+      <div class="intro-eyebrow">Civil Service Examination – Task Management</div>
+      <h1 class="intro-hello">
+        <span id="introGreeting" class="intro-greeting"><span id="typedGreeting"></span><span class="type-caret" aria-hidden="true"></span></span> <span id="introName" class="intro-name">Adarsh</span>
+      </h1>
+      <p class="intro-sub" id="introDate">—</p>
+      <p class="intro-quote" id="introQuote">"You have the right to perform your duties, but you are not entitled to the fruits of your actions."</p>
+      <button class="btn btn--primary btn--lg" id="getStartedBtn">Get Started</button>
+    </div>
+
+    <!-- Login card slides in over intro -->
+    <div class="login-overlay" id="loginOverlay" aria-hidden="true">
+      <div class="login-card glass">
+        <button class="login-close" id="loginClose" aria-label="Back to welcome">←</button>
+        <h2 class="login-title">Sign in</h2>
+        <p class="login-desc">Pick up your campaign where you left off.</p>
+
+        <label class="field">
+          <span class="field-label">User ID</span>
+          <input type="text" id="loginUserInput" class="field-input" placeholder="User ID" autocomplete="username" />
+        </label>
+        <label class="field">
+          <span class="field-label">Password</span>
+          <span class="password-input-wrap">
+            <input type="password" id="loginPassInput" class="field-input" placeholder="••••••••" autocomplete="current-password" />
+            <button type="button" class="password-peek" id="passwordPeek" aria-label="Hold to show password" title="Hold to show password">👁</button>
+          </span>
+        </label>
+
+        <div class="login-row">
+          <label class="check"><input type="checkbox" id="rememberMe" checked /> <span>Remember me</span></label>
+        </div>
+
+        <p class="field-error" id="loginError"></p>
+        <button class="btn btn--primary btn--block" id="loginSubmit">Login</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIEW 2: MENU ============ -->
+  <section class="view view--menu" id="view-menu">
+    <header class="topbar topbar--menu">
+      <div class="topbar-brand">
+        <span class="brand-mark">◆</span>
+        <span class="brand-text">CSE Task Management</span>
+      </div>
+      <div class="topbar-actions">
+        <span class="greeting">Hi, <strong id="menuName">Adarsh</strong></span>
+        <button class="btn btn--ghost btn--sm" id="lastVisitedBtn">🕘 Last Visited</button>
+        <button class="btn btn--ghost btn--sm" id="settingsBtn">⚙️ Settings</button>
+        <button class="btn btn--ghost btn--sm" id="logoutBtn">Log out</button>
+      </div>
+    </header>
+
+    <!-- Blinking exam countdown banner (10→0 days & exam day) -->
+    <div class="exam-banner" id="examBanner" hidden></div>
+
+    <div class="menu-body">
+      <div class="menu-head">
+        <h2 class="menu-title">Your Journey</h2>
+        <p class="menu-subtitle">"शीलं परम भूषणम्" — Character is the highest virtue.</p>
+      </div>
+
+      <div class="menu-grid menu-grid--five" id="menuGrid">
+        <button class="module-card glass" data-module="syllabus">
+          <div class="module-icon">📜</div>
+          <h3 class="module-title">Syllabus</h3>
+          <p class="module-desc">Prelims, Mains and Interview in one place.</p>
+          <div class="module-foot">
+            <span class="module-stat">View syllabus</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+
+        <button class="module-card glass" data-module="about">
+          <div class="module-icon">🏛️</div>
+          <h3 class="module-title">About CSE Examination</h3>
+          <p class="module-desc">Pattern, upcoming dates, and a live countdown calendar.</p>
+          <div class="module-foot">
+            <span class="module-stat">Explore</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+
+        <button class="module-card glass" data-module="tracker">
+          <div class="module-icon">📚</div>
+          <h3 class="module-title">Prelims Progress</h3>
+          <p class="module-desc">Track every Prelims subject chapter-wise.</p>
+          <div class="module-foot">
+            <span class="module-stat" id="menuOverallStat">0% complete</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+
+        <button class="module-card glass" data-module="mains">
+          <div class="module-icon">📝</div>
+          <h3 class="module-title">Mains Progress</h3>
+          <p class="module-desc">GS, Optional & answer-writing notes</p>
+          <div class="module-foot">
+            <span class="module-stat">—</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+
+        <button class="module-card glass" data-module="interview">
+          <div class="module-icon">🎙️</div>
+          <h3 class="module-title">Interview Progress</h3>
+          <p class="module-desc">Keep your personality-test notes here.</p>
+          <div class="module-foot">
+            <span class="module-stat">Notes</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+
+        <button class="module-card glass" data-module="planner">
+          <div class="module-icon">🗓️</div>
+          <h3 class="module-title">Weekly Planner</h3>
+          <p class="module-desc">Plan tasks across two weeks with timings & progress.</p>
+          <div class="module-foot">
+            <span class="module-stat" id="menuPlannerStat">0% this week</span>
+            <span class="module-go">Open →</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Backup / Sync widget (bottom-right) -->
+    <div class="backup-widget" id="backupWidget">
+      <button class="backup-toggle" id="backupToggle" aria-label="Backup and sync" title="Backup / Sync">
+        <span class="backup-toggle-icon">⇅</span>
+        <span class="backup-toggle-text">Backup</span>
+      </button>
+      <div class="backup-panel" id="backupPanel" hidden>
+        <div class="backup-panel-head">
+          <h4 class="backup-panel-title">Backup &amp; Sync</h4>
+          <button class="backup-panel-close" id="backupPanelClose" aria-label="Close">✕</button>
+        </div>
+        <p class="backup-panel-hint">Move your data between devices: <strong>export</strong> on the device you just used, then <strong>import</strong> on the other.</p>
+        <div class="backup-actions">
+          <button class="btn btn--primary btn--sm" id="exportBtn">⬇ Export data</button>
+          <button class="btn btn--ghost btn--sm" id="importBtn">⬆ Import data</button>
+          <input type="file" id="importFile" accept=".json,application/json" hidden />
+        </div>
+        <div class="backup-stamps">
+          <div class="backup-stamp"><span class="backup-stamp-label">Last exported</span><span class="backup-stamp-val" id="lastExportStamp">—</span></div>
+          <div class="backup-stamp"><span class="backup-stamp-label">Last imported</span><span class="backup-stamp-val" id="lastImportStamp">—</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="view view--tracker" id="view-tracker">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <button class="btn btn--ghost btn--sm" id="backToMenu">← Menu</button>
+        <span class="brand-text">Prelims Progress</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn--ghost btn--sm" id="prelimsSyllabusBtn">📚 Syllabus</button>
+        <span class="greeting">Hi, <strong id="trackerName">Adarsh</strong></span>
+      </div>
+    </header>
+
+    <div class="tracker-body">
+      <!-- Module tabs -->
+      <nav class="ptabs" id="prelimsTabs" aria-label="Prelims modules">
+        <button class="ptab is-active" data-ptab="chapters">📘 Chapter Completion</button>
+        <button class="ptab" data-ptab="revision">🔁 Revision Sets</button>
+        <button class="ptab" data-ptab="mock">📝 Mock Sets</button>
+        <button class="ptab" data-ptab="mockscore">🎯 Mock Scores</button>
+        <button class="ptab" data-ptab="csat">🧮 CSAT</button>
+        <button class="ptab" data-ptab="notes">📒 Notes</button>
+      </nav>
+
+      <!-- ===== PANEL: Chapter Completion ===== -->
+      <div class="ppanel is-active" id="ppanel-chapters">
+        <div class="stats-grid" id="statsGrid"></div>
+        <div class="controls">
+          <div class="search-wrap">
+            <span class="search-icon">⌕</span>
+            <input type="text" id="subjectSearch" class="search-input" placeholder="Search subjects…" />
+          </div>
+          <div class="filter-row" id="subjectFilters">
+            <button class="chip is-active" data-filter="all">All</button>
+            <button class="chip" data-filter="incomplete">In progress</button>
+            <button class="chip" data-filter="completed">Completed</button>
+            <button class="chip" data-filter="alpha">A–Z</button>
+          </div>
+        </div>
+        <div class="subject-grid" id="subjectGrid"></div>
+      </div>
+
+      <!-- ===== PANEL: Revision Sets ===== -->
+      <div class="ppanel" id="ppanel-revision">
+        <p class="panel-hint">Every chapter you complete appears here automatically. Log each revision to track spacing.</p>
+        <div class="setlist" id="revisionList"></div>
+      </div>
+
+      <!-- ===== PANEL: Mock Sets ===== -->
+      <div class="ppanel" id="ppanel-mock">
+        <p class="panel-hint">Every completed chapter appears here automatically. Log each mock attempt chapter-wise.</p>
+        <div class="setlist" id="mockList"></div>
+      </div>
+
+      <!-- ===== PANEL: Mock Scores ===== -->
+      <div class="ppanel" id="ppanel-mockscore">
+        <div class="mscore-head">
+          <div class="mscore-summary" id="mscoreSummary"></div>
+          <button class="btn btn--primary btn--sm" id="mscoreAddBtn">＋ Add Mock</button>
+        </div>
+        <div class="mscore-list" id="mscoreList"></div>
+      </div>
+
+      <!-- ===== PANEL: CSAT ===== -->
+      <div class="ppanel" id="ppanel-csat">
+        <div class="add-form add-form--notes">
+          <input type="text" id="csatInput" class="field-input" placeholder="Add a CSAT topic…" />
+          <button class="btn btn--primary" id="csatAddBtn">＋ Add Topic</button>
+        </div>
+        <div class="setlist" id="csatList"></div>
+      </div>
+
+      <!-- ===== PANEL: Subject Notes ===== -->
+      <div class="ppanel" id="ppanel-notes">
+        <div class="notes-toolbar">
+          <label class="notes-subject-label">
+            <span>Subject</span>
+            <select id="notesSubject" class="field-input notes-select"></select>
+          </label>
+          <div class="search-wrap notes-search">
+            <span class="search-icon">⌕</span>
+            <input type="text" id="notesSearch" class="search-input" placeholder="Search notes…" />
+          </div>
+        </div>
+        <div class="add-form subjnote-add">
+          <select id="subjnoteChapter" class="field-input subjnote-chapter"></select>
+          <input type="text" id="subjnoteText" class="field-input subjnote-text" placeholder="Write a note…" />
+          <button class="btn btn--primary" id="subjnoteAddBtn">＋ Add Note</button>
+        </div>
+        <div class="setlist" id="subjnoteList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIEW 4: EXAM PATTERN ============ -->
+  <section class="view view--pattern" id="view-pattern">
+    <!-- scroll progress bar -->
+    <div class="scroll-progress" id="patternProgress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="topbar-brand">
+        <button class="btn btn--ghost btn--sm" id="patternBack">← About</button>
+        <span class="brand-text">Complete Exam Pattern</span>
+      </div>
+      <div class="topbar-actions">
+        <span class="greeting">Hi, <strong>Adarsh</strong></span>
+      </div>
+    </header>
+
+    <!-- sticky section nav -->
+    <nav class="pattern-nav" id="patternNav" aria-label="Exam stages">
+      <a href="#sec-prelims" class="pnav-link is-active" data-target="sec-prelims">🧭 Prelims</a>
+      <a href="#sec-mains" class="pnav-link" data-target="sec-mains">📚 Mains</a>
+      <a href="#sec-interview" class="pnav-link" data-target="sec-interview">🎙️ Interview</a>
+      <a href="#sec-merit" class="pnav-link" data-target="sec-merit">🏆 Final Merit</a>
+    </nav>
+
+    <div class="pattern-wrap" id="patternScroll">
+      <p class="pattern-intro reveal">The Civil Services Examination (CSE) consists of three stages: the Preliminary Examination, the Main Examination, and the Personality Test (Interview).</p>
+
+      <!-- ===== STAGE 1: PRELIMS ===== -->
+      <section class="pattern-section reveal" id="sec-prelims">
+        <h2 class="pattern-h"><span class="pattern-h-icon">🧭</span> Stage 1 — Preliminary Examination</h2>
+        <p class="pattern-desc">Objective-type examination conducted for screening candidates for the Main Examination.</p>
+        <div class="table-scroll">
+          <table class="exam-table">
+            <thead><tr><th>Paper</th><th>Subject</th><th>Marks</th><th>Questions</th><th>Duration</th><th>Nature</th></tr></thead>
+            <tbody>
+              <tr><td>Paper I</td><td>General Studies</td><td>200</td><td>100</td><td>2 Hours</td><td><span class="badge badge--merit">Merit (Cutoff)</span></td></tr>
+              <tr><td>Paper II</td><td>CSAT</td><td>200</td><td>80</td><td>2 Hours</td><td><span class="badge badge--qual">Qualifying (33%)</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card-grid">
+          <div class="pcard glass">
+            <h3 class="pcard-h">📘 GS Paper I — Subjects</h3>
+            <ul class="chip-list"><li>History</li><li>Geography</li><li>Polity</li><li>Economy</li><li>Environment</li><li>Science &amp; Technology</li><li>Current Affairs</li></ul>
+          </div>
+          <div class="pcard glass">
+            <h3 class="pcard-h">🧮 CSAT — Topics</h3>
+            <ul class="chip-list"><li>Reading Comprehension</li><li>Logical Reasoning</li><li>Analytical Ability</li><li>Decision Making</li><li>Basic Numeracy</li><li>Data Interpretation</li></ul>
+          </div>
+        </div>
+
+        <div class="card-grid">
+          <div class="pcard glass">
+            <h3 class="pcard-h">✏️ Marking Scheme</h3>
+            <div class="mark-rows">
+              <div class="mark-row"><span class="mark-label">GS Paper I</span><span class="badge badge--good">+2 correct</span><span class="badge badge--bad">−0.66 wrong</span></div>
+              <div class="mark-row"><span class="mark-label">CSAT</span><span class="badge badge--good">+2.5 correct</span><span class="badge badge--bad">−0.83 wrong</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert-box">
+          <span class="alert-icon">ℹ️</span>
+          <ul class="alert-list">
+            <li>Only <strong>GS Paper I</strong> determines the Prelims cut-off.</li>
+            <li><strong>CSAT is qualifying only.</strong></li>
+            <li>Minimum qualifying marks in CSAT = <strong>33%</strong>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== STAGE 2: MAINS ===== -->
+      <section class="pattern-section reveal" id="sec-mains">
+        <h2 class="pattern-h"><span class="pattern-h-icon">📚</span> Stage 2 — Main Examination</h2>
+        <p class="pattern-desc">Descriptive written examination that tests analytical ability, conceptual understanding and answer-writing skills.</p>
+        <div class="table-scroll">
+          <table class="exam-table">
+            <thead><tr><th>Paper</th><th>Subject</th><th>Marks</th><th>Counted in Merit</th></tr></thead>
+            <tbody>
+              <tr><td>Paper A</td><td>Indian Language</td><td>300</td><td><span class="badge badge--qual">No (Qualifying)</span></td></tr>
+              <tr><td>Paper B</td><td>English</td><td>300</td><td><span class="badge badge--qual">No (Qualifying)</span></td></tr>
+              <tr><td>Essay</td><td>Essay</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>GS I</td><td>General Studies I</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>GS II</td><td>General Studies II</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>GS III</td><td>General Studies III</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>GS IV</td><td>General Studies IV</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>Optional I</td><td>Optional Paper I</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+              <tr><td>Optional II</td><td>Optional Paper II</td><td>250</td><td><span class="badge badge--good">Yes</span></td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="2">Total Written Marks</td><td colspan="2"><span class="badge badge--total">1750</span></td></tr></tfoot>
+          </table>
+        </div>
+
+        <div class="card-grid card-grid--exp">
+          <details class="exp-card glass" open>
+            <summary class="exp-head"><span>📝 Essay</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>Two Essays</li><li>One essay from each section</li><li>Total Marks: 250</li></ul></div>
+          </details>
+          <details class="exp-card glass">
+            <summary class="exp-head"><span>📜 General Studies I</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>History</li><li>Culture</li><li>Society</li><li>Geography</li></ul></div>
+          </details>
+          <details class="exp-card glass">
+            <summary class="exp-head"><span>⚖️ General Studies II</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>Constitution</li><li>Governance</li><li>Polity</li><li>Social Justice</li><li>International Relations</li></ul></div>
+          </details>
+          <details class="exp-card glass">
+            <summary class="exp-head"><span>📈 General Studies III</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>Economy</li><li>Agriculture</li><li>Environment</li><li>Security</li><li>Disaster Management</li><li>Science &amp; Technology</li></ul></div>
+          </details>
+          <details class="exp-card glass">
+            <summary class="exp-head"><span>🧭 General Studies IV</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>Ethics</li><li>Integrity</li><li>Aptitude</li><li>Emotional Intelligence</li><li>Case Studies</li></ul></div>
+          </details>
+          <details class="exp-card glass">
+            <summary class="exp-head"><span>🎯 Optional Subject</span><span class="exp-arrow">▾</span></summary>
+            <div class="exp-body"><ul class="chip-list"><li>One Optional Subject</li><li>Two Papers</li><li>250 Marks Each</li></ul></div>
+          </details>
+        </div>
+
+        <h3 class="pcard-h" style="margin-top:0.4rem">Question Pattern</h3>
+        <div class="card-grid">
+          <div class="pcard glass pcard--q"><h3 class="pcard-h">10 Marks</h3><p class="q-big">150 Words</p></div>
+          <div class="pcard glass pcard--q"><h3 class="pcard-h">15 Marks</h3><p class="q-big">250 Words</p></div>
+        </div>
+      </section>
+
+      <!-- ===== STAGE 3: INTERVIEW ===== -->
+      <section class="pattern-section reveal" id="sec-interview">
+        <h2 class="pattern-h"><span class="pattern-h-icon">🎙️</span> Stage 3 — Personality Test (Interview)</h2>
+        <div class="table-scroll">
+          <table class="exam-table">
+            <thead><tr><th>Marks</th><th>Duration</th><th>Panel</th></tr></thead>
+            <tbody>
+              <tr><td><span class="badge badge--total">275</span></td><td>25–40 Minutes</td><td>Chairperson + 4 Members</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pcard glass">
+          <h3 class="pcard-h">🧠 The Interview assesses</h3>
+          <ul class="chip-list">
+            <li>Personality</li><li>Communication Skills</li><li>Leadership</li><li>Integrity</li>
+            <li>Decision Making</li><li>Presence of Mind</li><li>Administrative Aptitude</li>
+            <li>Emotional Intelligence</li><li>Awareness of Current Affairs</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== FINAL MERIT ===== -->
+      <section class="pattern-section reveal" id="sec-merit">
+        <h2 class="pattern-h"><span class="pattern-h-icon">🏆</span> Final Merit</h2>
+        <div class="table-scroll">
+          <table class="exam-table exam-table--merit">
+            <thead><tr><th>Stage</th><th>Marks Counted</th></tr></thead>
+            <tbody>
+              <tr><td>Prelims</td><td>No</td></tr>
+              <tr><td>Mains</td><td>1750</td></tr>
+              <tr><td>Interview</td><td>275</td></tr>
+              <tr class="merit-row"><td><strong>Final Merit</strong></td><td><strong>2025 Marks (1750 + 275)</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <button class="btn btn--ghost btn--sm pattern-top" id="patternTopBtn">↑ Back to top</button>
+    </div>
+  </section>
+
+  <!-- ============ VIEW 5: MAINS PROGRESS ============ -->
+  <section class="view view--pattern" id="view-mains">
+    <header class="topbar">
+      <div class="topbar-brand">
+        <button class="btn btn--ghost btn--sm" id="mainsBack">← Menu</button>
+        <span class="brand-text">Mains Progress</span>
+      </div>
+      <div class="topbar-actions">
+        <span class="greeting">Hi, <strong>Adarsh</strong></span>
+      </div>
+    </header>
+    <nav class="pattern-nav" id="mainsNav" aria-label="Mains papers"></nav>
+    <div class="pattern-wrap" id="mainsScroll"></div>
+  </section>
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal glass" role="dialog" aria-modal="true" aria-labelledby="modalSubjectName">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="modalSubjectName">Subject</h2>
+          <p class="modal-progress-text" id="modalProgressText">0 / 0 chapters</p>
+        </div>
+        <div class="modal-ring" id="modalRing"></div>
+        <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      </header>
+
+      <div class="modal-tools">
+        <div class="search-wrap search-wrap--sm">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="chapterSearch" class="search-input" placeholder="Search chapters…" />
+        </div>
+        <div class="filter-row" id="chapterFilters">
+          <button class="chip is-active" data-cfilter="all">All</button>
+          <button class="chip" data-cfilter="incomplete">Pending</button>
+          <button class="chip" data-cfilter="completed">Done</button>
+        </div>
+      </div>
+
+      <div class="chapter-list" id="chapterList"></div>
+
+      <div class="modal-add">
+        <div class="add-form">
+          <input type="text" id="newChapterInput" class="field-input" placeholder="Chapter name…" />
+          <button class="btn btn--primary" id="saveChapterBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SYLLABUS MODAL ============ -->
+  <div class="modal-backdrop" id="syllabusBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="syllabusTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="syllabusTitle">Syllabus</h2>
+          <p class="modal-progress-text">Preliminary · Mains · Interview</p>
+        </div>
+        <button class="modal-close" data-close="syllabusBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="about-grid">
+          <button class="about-tile" data-stage="prelims">
+            <span class="about-tile-icon">📝</span>
+            <span class="about-tile-title">Prelims</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+          <button class="about-tile" data-stage="mains">
+            <span class="about-tile-icon">📚</span>
+            <span class="about-tile-title">Mains</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+          <button class="about-tile" data-stage="interview">
+            <span class="about-tile-icon">🎙️</span>
+            <span class="about-tile-title">Interview</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SYLLABUS: STAGE LIST (Prelims / Mains papers) ============ -->
+  <div class="modal-backdrop" id="stageBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="stageTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="stageTitle">Stage</h2>
+          <p class="modal-progress-text" id="stageSub"></p>
+        </div>
+        <button class="modal-close" data-close="stageBackdrop" data-back="syllabusBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="about-grid" id="stageGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SYLLABUS: PAPER DETAIL ============ -->
+  <div class="modal-backdrop" id="paperBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="paperTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="paperTitle">Paper</h2>
+          <p class="modal-progress-text" id="paperMeta"></p>
+        </div>
+        <button class="modal-close" id="paperClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body" id="paperBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ ABOUT MODAL (hub) ============ -->
+  <div class="modal-backdrop" id="aboutBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="aboutTitle">About CSE Examination</h2>
+          <p class="modal-progress-text">Pattern · Dates · Calendar</p>
+        </div>
+        <button class="modal-close" data-close="aboutBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="about-grid">
+          <button class="about-tile" data-view="pattern">
+            <span class="about-tile-icon">🧭</span>
+            <span class="about-tile-title">Examination Pattern</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+          <button class="about-tile" data-open="datesBackdrop">
+            <span class="about-tile-icon">📅</span>
+            <span class="about-tile-title">Upcoming CSE Dates</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+          <button class="about-tile" data-open="calendarBackdrop">
+            <span class="about-tile-icon">🗓️</span>
+            <span class="about-tile-title">Calendar & Countdown</span>
+            <span class="about-tile-go">Open →</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- About > Pattern ---- -->
+  <!-- (Examination Pattern is now a full-screen view: #view-pattern) -->
+
+  <!-- ---- About > Dates ---- -->
+  <div class="modal-backdrop" id="datesBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="datesTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="datesTitle">Upcoming CSE Examination Dates</h2>
+        </div>
+        <button class="modal-close" data-close="datesBackdrop" data-back="aboutBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <section class="info-section">
+          <h3 class="info-h">Prelims</h3>
+          <ul class="date-sched">
+            <li><span class="date-day">23 May 2027</span><span class="date-paper">GS Paper I &amp; CSAT</span></li>
+          </ul>
+        </section>
+        <section class="info-section">
+          <h3 class="info-h">Mains</h3>
+          <ul class="date-sched">
+            <li><span class="date-day">20 Aug 2027</span><span class="date-paper">Essay</span></li>
+            <li><span class="date-day">21 Aug 2027</span><span class="date-paper">GS Paper I &amp; GS Paper II</span></li>
+            <li><span class="date-day">22 Aug 2027</span><span class="date-paper">GS Paper III &amp; GS Paper IV</span></li>
+            <li><span class="date-day">28 Aug 2027</span><span class="date-paper">Language Paper I &amp; II (Indian Language &amp; English)</span></li>
+            <li><span class="date-day">29 Aug 2027</span><span class="date-paper">Optional Paper I &amp; II</span></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- About > Calendar ---- -->
+  <div class="modal-backdrop" id="calendarBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="calendarTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="calendarTitle">Calendar</h2>
+        </div>
+        <button class="modal-close" data-close="calendarBackdrop" data-back="aboutBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="cal-wrap cal-wrap--current" id="calCurrent"></div>
+        <div class="countdown-row">
+          <div class="countdown-card">
+            <span class="countdown-label">Days left for Prelims</span>
+            <span class="countdown-value" id="prelimsCountdown">—</span>
+            <span class="countdown-date" id="prelimsCountdownDate">23 May 2027</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-label">Days left for Mains</span>
+            <span class="countdown-value" id="mainsCountdown">—</span>
+            <span class="countdown-date" id="mainsCountdownDate">20 Aug 2027</span>
+          </div>
+        </div>
+
+        <!-- Execute 2028 Plan -->
+        <div class="plan2028" id="plan2028Wrap">
+          <button class="btn btn--primary btn--block" id="execute2028Btn">🚀 Execute 2028 Plan</button>
+          <p class="plan2028-note" id="plan2028Note"></p>
+        </div>
+
+        <div class="cal-wrap" id="calMay"></div>
+        <div class="cal-wrap" id="calAug"></div>
+
+        <!-- Marks scored (enabled after each exam passes) -->
+        <section class="marks-section" id="marksSection">
+          <h3 class="marks-title">📊 Marks Scored — <span id="marksYearLabel">2027</span></h3>
+          <p class="marks-hint" id="marksHint">Marks entry unlocks after each exam date passes.</p>
+
+          <div class="marks-block" id="marksPrelimsBlock">
+            <div class="marks-block-head">
+              <h4 class="marks-block-title">Prelims</h4>
+              <span class="marks-lock" id="prelimsLock">🔒 Locked until exam</span>
+            </div>
+            <div class="marks-grid">
+              <label class="marks-field">
+                <span class="field-label">GS Paper I (200)</span>
+                <input type="number" step="0.01" class="field-input" id="markPrelimsGS" disabled placeholder="—" />
+              </label>
+              <label class="marks-field">
+                <span class="field-label">CSAT (200)</span>
+                <input type="number" step="0.01" class="field-input" id="markCSAT" disabled placeholder="—" />
+              </label>
+            </div>
+          </div>
+
+          <div class="marks-block" id="marksMainsBlock">
+            <div class="marks-block-head">
+              <h4 class="marks-block-title">Mains</h4>
+              <span class="marks-lock" id="mainsLock">🔒 Locked until exam</span>
+            </div>
+            <div class="marks-grid">
+              <label class="marks-field"><span class="field-label">Essay (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markEssay" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">GS Paper I (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markGS1" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">GS Paper II (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markGS2" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">GS Paper III (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markGS3" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">GS Paper IV (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markGS4" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">Optional Paper I (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markOpt1" disabled placeholder="—" /></label>
+              <label class="marks-field"><span class="field-label">Optional Paper II (250)</span><input type="number" step="0.01" class="field-input marks-mains-input" id="markOpt2" disabled placeholder="—" /></label>
+            </div>
+            <div class="marks-total" id="mainsTotalRow" hidden>
+              <span class="marks-total-label">Mains written total</span>
+              <span class="marks-total-val" id="mainsTotalVal">—</span>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--block" id="marksSaveBtn" hidden>Save Marks</button>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Execute 2028 Plan: date entry modal ===== -->
+  <div class="modal-backdrop" id="plan2028Backdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="plan2028Title">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="plan2028Title">🚀 Execute 2028 Plan</h2>
+          <p class="modal-progress-text">Set your 2028 attempt dates. Countdowns and calendars update instantly.</p>
+        </div>
+        <button class="modal-close" id="plan2028Close" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="marks-grid">
+          <label class="marks-field">
+            <span class="field-label">Prelims date (2028)</span>
+            <input type="date" class="field-input" id="plan2028Prelims" />
+          </label>
+          <label class="marks-field">
+            <span class="field-label">Mains start date (2028)</span>
+            <input type="date" class="field-input" id="plan2028Mains" />
+          </label>
+        </div>
+        <p class="plan2028-warn" id="plan2028Warn" hidden></p>
+        <div class="plan2028-actions">
+          <button class="btn btn--primary btn--block" id="plan2028Save">Activate 2028 Plan</button>
+          <button class="btn btn--ghost btn--block" id="plan2028Reset" hidden>↩︎ Revert to 2027 Plan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Settings modal ===== -->
+  <div class="modal-backdrop" id="settingsBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="settingsTitle">⚙️ Settings</h2>
+          <p class="modal-progress-text">Preferences for this device.</p>
+        </div>
+        <button class="modal-close" id="settingsClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="setting-row">
+          <div class="setting-text">
+            <span class="setting-name">Exam countdown warnings</span>
+            <span class="setting-desc">Popups at 90/60/30/21/14 days, and a blinking banner in the final 10 days before each exam.</span>
+          </div>
+          <button class="toggle-switch is-on" id="warnToggle" role="switch" aria-checked="true" aria-label="Toggle exam warnings">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Exam warning popup (90/60/30/21/14) ===== -->
+  <div class="modal-backdrop" id="examWarnBackdrop" aria-hidden="true">
+    <div class="modal warn-modal glass" role="dialog" aria-modal="true" aria-labelledby="examWarnTitle">
+      <div class="warn-emoji" id="examWarnEmoji">⏳</div>
+      <h2 class="warn-title" id="examWarnTitle">Countdown</h2>
+      <p class="warn-msg" id="examWarnMsg"></p>
+      <button class="btn btn--primary btn--block" id="examWarnDismiss">Got it</button>
+    </div>
+  </div>
+
+  <!-- ============ MAINS MODAL (blank) ============ -->
+  <!-- ===== Generic Topic Notes modal (Mains) ===== -->
+  <div class="modal-backdrop" id="topicNotesBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="topicNotesTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="topicNotesTitle">Topic</h2>
+          <p class="modal-progress-text"><span id="topicNotesCount">0</span> notes saved</p>
+        </div>
+        <button class="modal-close" id="topicNotesClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="add-form add-form--notes">
+          <input type="text" id="topicNoteInput" class="field-input" placeholder="Write a note…" />
+          <button class="btn btn--primary" id="topicNoteAddBtn">＋ Add Note</button>
+        </div>
+        <ul class="notes-list" id="topicNotesList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Popup 1: Subtopics list ===== -->
+  <div class="modal-backdrop" id="subtopicsBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="subtopicsTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="subtopicsTitle">Topic</h2>
+          <p class="modal-progress-text"><span id="subtopicsCount">0</span> subtopics</p>
+        </div>
+        <button class="modal-close" id="subtopicsClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <button class="btn btn--primary btn--block" id="addSubtopicBtn">＋ Add Subtopic</button>
+        <div class="search-wrap subt-search">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="subtopicSearch" class="search-input" placeholder="Search subtopics…" />
+        </div>
+        <div class="subt-list" id="subtopicsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Popup 2: Add / Edit subtopic form ===== -->
+  <div class="modal-backdrop" id="subtopicFormBackdrop" aria-hidden="true">
+    <div class="modal info-modal info-modal--wide glass" role="dialog" aria-modal="true" aria-labelledby="subtFormTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="subtFormTitle">Add Subtopic</h2>
+          <p class="modal-progress-text" id="subtFormSub"></p>
+        </div>
+        <button class="modal-close" id="subtFormClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="field-group">
+          <label class="field-label" for="subtName">📌 Subtopic Name</label>
+          <input type="text" id="subtName" class="field-input" placeholder="e.g. Federal System" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="subtType">🏷️ Type</label>
+          <select id="subtType" class="field-input">
+            <option value="Static">Static</option>
+            <option value="Current Affairs (CA)">Current Affairs (CA)</option>
+            <option value="Static + Current Affairs">Static + Current Affairs</option>
+          </select>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="subtData">📖 Data / Knowledge</label>
+          <textarea id="subtData" class="field-input field-textarea" rows="6" placeholder="Facts, statistics, reports, committee recommendations, examples…"></textarea>
+        </div>
+        <div class="field-group">
+          <label class="field-label">📝 PYQs</label>
+          <div class="pyq-editor" id="pyqEditor"></div>
+          <button class="btn btn--ghost btn--sm" id="addPyqBtn">＋ Add Another PYQ</button>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="subtLinks">🔗 Interlinkage</label>
+          <textarea id="subtLinks" class="field-input field-textarea" rows="4" placeholder="Linked with: Disaster Management, Local Government, Finance Commission…"></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--ghost" id="subtFormCancel">Cancel</button>
+          <button class="btn btn--primary" id="subtFormSave">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Popup 3: View / Edit subtopic detail ===== -->
+  <div class="modal-backdrop" id="subtopicViewBackdrop" aria-hidden="true">
+    <div class="modal info-modal info-modal--wide glass" role="dialog" aria-modal="true" aria-labelledby="subtViewTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="subtViewTitle">Subtopic</h2>
+          <p class="modal-progress-text" id="subtViewStamps"></p>
+        </div>
+        <div class="modal-head-actions">
+          <button class="btn btn--ghost btn--sm" id="subtEditBtn">✎ Edit</button>
+          <button class="icon-btn icon-btn--danger" id="subtDeleteBtn" title="Delete subtopic" aria-label="Delete subtopic">🗑</button>
+          <button class="modal-close" id="subtViewClose" aria-label="Close">✕</button>
+        </div>
+      </header>
+      <div class="info-body" id="subtViewBody"></div>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="interviewBackdrop" aria-hidden="true">
+    <div class="modal info-modal info-modal--wide glass" role="dialog" aria-modal="true" aria-labelledby="interviewTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="interviewTitle">Interview Progress</h2>
+          <p class="modal-progress-text"><span id="notesCount">0</span> notes saved</p>
+        </div>
+        <button class="modal-close" data-close="interviewBackdrop" aria-label="Close">✕</button>
+      </header>
+      <div class="iv-layout">
+        <!-- LEFT: topics -->
+        <aside class="iv-sidebar">
+          <div class="iv-side-add">
+            <input type="text" id="newTopicInput" class="field-input" placeholder="New topic…" />
+            <button class="btn btn--primary btn--sm" id="addTopicBtn">＋</button>
+          </div>
+          <div class="iv-topic-list" id="topicList"></div>
+        </aside>
+        <!-- RIGHT: notes for selected topic -->
+        <section class="iv-main">
+          <div class="iv-main-head">
+            <h3 class="iv-topic-title" id="currentTopicTitle">Select a topic</h3>
+          </div>
+          <div class="add-form add-form--notes" id="noteAddForm" hidden>
+            <input type="text" id="newNoteInput" class="field-input" placeholder="Write a note…" />
+            <button class="btn btn--primary" id="saveNoteBtn">＋ Add Note</button>
+          </div>
+          <ul class="notes-list" id="notesList"></ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Delete-note confirmation modal ===== -->
+  <div class="modal-backdrop" id="confirmBackdrop" aria-hidden="true">
+    <div class="modal confirm-modal glass" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+      <div class="confirm-icon" id="confirmIcon">🗑️</div>
+      <h2 class="confirm-title" id="confirmTitle">Delete Note?</h2>
+      <p class="confirm-msg" id="confirmMsg">Are you sure you want to delete this note? This action cannot be undone.</p>
+      <div class="confirm-actions">
+        <button class="btn btn--ghost" id="confirmCancel">❌ Cancel</button>
+        <button class="btn btn--danger" id="confirmDelete">🗑️ Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Set detail modal (subject chapters for Revision/Mock) ===== -->
+  <div class="modal-backdrop" id="setBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+      <header class="modal-head">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="setTitle">Subject</h2>
+          <p class="modal-progress-text" id="setSub"></p>
+        </div>
+        <button class="modal-close" id="setClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body" id="setBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== Date prompt modal (Add Revision / Add Mock) ===== -->
+  <div class="modal-backdrop" id="dateBackdrop" aria-hidden="true">
+    <div class="modal confirm-modal glass" role="dialog" aria-modal="true" aria-labelledby="dateTitle">
+      <div class="confirm-icon" id="dateIcon">📅</div>
+      <h2 class="confirm-title" id="dateTitle">Add date</h2>
+      <p class="confirm-msg" id="dateMsg">Select the date.</p>
+      <input type="date" id="dateInput" class="field-input" />
+      <div class="confirm-actions" style="margin-top:1.2rem">
+        <button class="btn btn--ghost" id="dateCancel">Cancel</button>
+        <button class="btn btn--primary" id="dateSave">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Weekly Planner modal ===== -->
+  <div class="modal-backdrop" id="plannerBackdrop" aria-hidden="true">
+    <div class="modal info-modal info-modal--wide glass" role="dialog" aria-modal="true" aria-labelledby="plannerTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="plannerTitle">🗓️ Weekly Planner</h2>
+          <p class="modal-progress-text" id="plannerSub">Plan your tasks across two weeks.</p>
+        </div>
+        <button class="modal-close" id="plannerClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="planner-weeks" id="plannerWeeks"></div>
+
+        <!-- Pending tasks carried over from past weeks -->
+        <section class="planner-pending" id="plannerPending">
+          <h3 class="planner-pending-title">⏳ Pending Tasks <span class="planner-pending-count" id="pendingCount">0</span></h3>
+          <p class="planner-pending-hint">These tasks from previous weeks are still incomplete.</p>
+          <div class="planner-pending-list" id="pendingList"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Planner: single day tasks modal ===== -->
+  <div class="modal-backdrop" id="dayBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="dayTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="dayTitle">Day</h2>
+          <p class="modal-progress-text" id="daySub">0 tasks</p>
+        </div>
+        <button class="modal-close" id="dayClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="day-add">
+          <input type="text" id="taskTitleInput" class="field-input" placeholder="Task description…" />
+          <div class="day-add-times">
+            <label class="day-time-field">
+              <span class="field-label">Start time</span>
+              <input type="time" id="taskStartInput" class="field-input" />
+            </label>
+            <label class="day-time-field">
+              <span class="field-label">End / Deadline</span>
+              <input type="time" id="taskEndInput" class="field-input" />
+            </label>
+          </div>
+          <button class="btn btn--primary btn--block" id="taskAddBtn">＋ Add Task</button>
+        </div>
+        <div class="day-tasklist" id="dayTaskList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Last Visited modal ===== -->
+  <div class="modal-backdrop" id="lastVisitedBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="lastVisitedTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="lastVisitedTitle">🕘 Last Visited</h2>
+          <p class="modal-progress-text">Recently opened sections.</p>
+        </div>
+        <button class="modal-close" id="lastVisitedClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body" id="lastVisitedBody"></div>
+    </div>
+  </div>
+
+  <!-- ===== Mock Score entry modal ===== -->
+  <div class="modal-backdrop" id="mscoreBackdrop" aria-hidden="true">
+    <div class="modal info-modal glass" role="dialog" aria-modal="true" aria-labelledby="mscoreTitle">
+      <header class="modal-head modal-head--sticky">
+        <div class="modal-head-left">
+          <h2 class="modal-subject" id="mscoreTitle">🎯 Add Mock Score</h2>
+          <p class="modal-progress-text" id="mscoreContext">Log a full mock test attempt.</p>
+        </div>
+        <button class="modal-close" id="mscoreClose" aria-label="Close">✕</button>
+      </header>
+      <div class="info-body">
+        <div class="mscore-form">
+          <label class="mscore-field">
+            <span class="field-label">Mock name / provider (optional)</span>
+            <input type="text" id="mscoreName" class="field-input" placeholder="e.g. Vision IAS PT Test 5" />
+          </label>
+          <div class="mscore-field-row">
+            <label class="mscore-field">
+              <span class="field-label">Date of attempt</span>
+              <input type="date" id="mscoreDate" class="field-input" />
+            </label>
+            <label class="mscore-field">
+              <span class="field-label">Score</span>
+              <input type="number" id="mscoreScore" class="field-input" step="0.01" placeholder="e.g. 118.66" />
+            </label>
+          </div>
+          <div class="mscore-field-row">
+            <label class="mscore-field">
+              <span class="field-label">Total questions</span>
+              <input type="number" id="mscoreTotalQ" class="field-input" min="0" placeholder="e.g. 100" />
+            </label>
+            <label class="mscore-field">
+              <span class="field-label">Questions attempted</span>
+              <input type="number" id="mscoreAttempted" class="field-input" min="0" placeholder="e.g. 82" />
+            </label>
+          </div>
+          <div class="mscore-field-row">
+            <label class="mscore-field">
+              <span class="field-label">Correct (optional)</span>
+              <input type="number" id="mscoreCorrect" class="field-input" min="0" placeholder="e.g. 64" />
+            </label>
+            <label class="mscore-field">
+              <span class="field-label">Duration (minutes)</span>
+              <input type="number" id="mscoreDuration" class="field-input" min="0" placeholder="e.g. 120" />
+            </label>
+          </div>
+          <label class="mscore-field">
+            <span class="field-label">Max marks (optional)</span>
+            <input type="number" id="mscoreMax" class="field-input" min="0" placeholder="e.g. 200" />
+          </label>
+          <label class="mscore-field">
+            <span class="field-label">Notes (optional)</span>
+            <input type="text" id="mscoreNotes" class="field-input" placeholder="Weak areas, silly mistakes…" />
+          </label>
+          <button class="btn btn--primary btn--block" id="mscoreSave">Save Mock</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scripts (ES modules, modular architecture) -->
+  <script src="js/resilience.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/examplan.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/confirm-dialog.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/syllabus-data.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/pattern.js"></script>
+  <script src="js/mains.js"></script>
+  <script src="js/subtopics.js"></script>
+  <script src="js/tracker.js"></script>
+  <script src="js/prelims.js"></script>
+  <script src="js/mockscore.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/backup.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

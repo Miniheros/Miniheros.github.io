@@ -1,0 +1,2210 @@
+{
+  "app": "CSE-Tracker",
+  "version": 2,
+  "updatedAt": "2026-07-02T05:05:29.124Z",
+  "data": {
+    "upsc.interviewNotes.tmqyqz9k1gq4": [],
+    "upsc.subjects": [
+      {
+        "id": "cmquq7wx71",
+        "name": "Polity",
+        "emoji": "⚖️",
+        "order": 0,
+        "chapters": [
+          {
+            "id": "cmquq7wx72",
+            "title": "Historical Background",
+            "done": true,
+            "completedAt": 1782466016805,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73",
+            "title": "Making of the Constitution",
+            "done": true,
+            "completedAt": 1782466017504,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh1",
+            "title": "Concept of Constitution",
+            "done": true,
+            "completedAt": 1782577521696,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2",
+            "title": "Salient Features of the Constitution",
+            "done": true,
+            "completedAt": 1782577523072,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3",
+            "title": "Preamble of the Constitution",
+            "done": true,
+            "completedAt": 1782577523706,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx76",
+            "title": "Union and its Territory",
+            "done": true,
+            "completedAt": 1782466019187,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx77",
+            "title": "Citizenship",
+            "done": true,
+            "completedAt": 1782466020740,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx78",
+            "title": "Fundamental Rights",
+            "done": true,
+            "completedAt": 1782466021905,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh4",
+            "title": "Directive Principles of State Policy",
+            "done": true,
+            "completedAt": 1782577526311,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7a",
+            "title": "Fundamental Duties",
+            "done": true,
+            "completedAt": 1782577526939,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx7b",
+            "title": "Amendment of the Constitution",
+            "done": true,
+            "completedAt": 1782577527556,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh5",
+            "title": "Basic Structure of the Constitution",
+            "done": true,
+            "completedAt": 1782577528073,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7d",
+            "title": "Parliamentary System",
+            "done": true,
+            "completedAt": 1782577529206,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx7e",
+            "title": "Federal System",
+            "done": true,
+            "completedAt": 1782577530356,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh6",
+            "title": "Centre–State Relations",
+            "done": true,
+            "completedAt": 1782577531055,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh7",
+            "title": "Inter-State Relations",
+            "done": true,
+            "completedAt": 1782577532072,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7g",
+            "title": "Emergency Provisions",
+            "done": true,
+            "completedAt": 1782577532705,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx7h",
+            "title": "President",
+            "done": true,
+            "completedAt": 1782577533872,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh8",
+            "title": "Vice-President",
+            "done": true,
+            "completedAt": 1782577534638,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7i",
+            "title": "Prime Minister",
+            "done": true,
+            "completedAt": 1782577535455,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh9",
+            "title": "Central Council of Ministers",
+            "done": true,
+            "completedAt": 1782577550171,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymha",
+            "title": "Cabinet Committees",
+            "done": true,
+            "completedAt": 1782577548988,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7j",
+            "title": "Parliament",
+            "done": true,
+            "completedAt": 1782577547605,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymhb",
+            "title": "Parliamentary Committees",
+            "done": true,
+            "completedAt": 1782577546221,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhc",
+            "title": "Parliamentary Forums",
+            "done": true,
+            "completedAt": 1782577544705,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7k",
+            "title": "Supreme Court",
+            "done": true,
+            "completedAt": 1782577543173,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymhd",
+            "title": "Judicial Review",
+            "done": true,
+            "completedAt": 1782577541689,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhe",
+            "title": "Judicial Activism",
+            "done": true,
+            "completedAt": 1782577540805,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhf",
+            "title": "Public Interest Litigation",
+            "done": true,
+            "completedAt": 1782577539607,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7l",
+            "title": "Governor",
+            "done": true,
+            "completedAt": 1782744689426,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymhg",
+            "title": "Chief Minister",
+            "done": true,
+            "completedAt": 1782785162863,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhh",
+            "title": "State Council of Ministers",
+            "done": true,
+            "completedAt": 1782785164927,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7m",
+            "title": "State Legislature",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymhi",
+            "title": "High Court",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhj",
+            "title": "Subordinate Courts",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhk",
+            "title": "Tribunals",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhl",
+            "title": "National Consumer Disputes Redressal Commission",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhm",
+            "title": "Lok Adalat and Other Courts",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhn",
+            "title": "Panchayati Raj",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymho",
+            "title": "Municipalities",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhp",
+            "title": "Union Territories",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhq",
+            "title": "Scheduled and Tribal Areas",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhr",
+            "title": "Election Commission",
+            "done": true,
+            "completedAt": 1782577563403,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhs",
+            "title": "Union Public Service Commission",
+            "done": true,
+            "completedAt": 1782577565473,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymht",
+            "title": "State Public Service Commission",
+            "done": true,
+            "completedAt": 1782577566786,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhu",
+            "title": "Finance Commission",
+            "done": true,
+            "completedAt": 1782577569022,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhv",
+            "title": "Goods and Services Tax Council",
+            "done": true,
+            "completedAt": 1782577570287,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhw",
+            "title": "National Commission for Scheduled Castes",
+            "done": true,
+            "completedAt": 1782577571536,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhx",
+            "title": "National Commission for Scheduled Tribes",
+            "done": true,
+            "completedAt": 1782577577586,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhy",
+            "title": "National Commission for Backward Classes",
+            "done": true,
+            "completedAt": 1782577576286,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymhz",
+            "title": "Special Officer for Linguistic Minorities",
+            "done": true,
+            "completedAt": 1782577574985,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh10",
+            "title": "Comptroller and Auditor General of India",
+            "done": true,
+            "completedAt": 1782577573720,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh11",
+            "title": "Attorney General of India",
+            "done": true,
+            "completedAt": 1782577581122,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh12",
+            "title": "Advocate General of the State",
+            "done": true,
+            "completedAt": 1782577582519,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh13",
+            "title": "Constitutional Prescriptions",
+            "done": true,
+            "completedAt": 1782577583918,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh14",
+            "title": "NITI Aayog",
+            "done": true,
+            "completedAt": 1782577585252,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh15",
+            "title": "National Human Rights Commission",
+            "done": true,
+            "completedAt": 1782577587839,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh16",
+            "title": "State Human Rights Commission",
+            "done": true,
+            "completedAt": 1782577589351,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh17",
+            "title": "National Commission for Women",
+            "done": true,
+            "completedAt": 1782577590818,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh18",
+            "title": "National Commission for Protection of Child Rights",
+            "done": true,
+            "completedAt": 1782577592351,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh19",
+            "title": "National Commission for Minorities",
+            "done": true,
+            "completedAt": 1782577597771,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1a",
+            "title": "Central Information Commission",
+            "done": true,
+            "completedAt": 1782577601305,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1b",
+            "title": "State Information Commission",
+            "done": true,
+            "completedAt": 1782577602883,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1c",
+            "title": "Central Vigilance Commission",
+            "done": true,
+            "completedAt": 1782577612982,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1d",
+            "title": "Central Bureau of Investigation",
+            "done": true,
+            "completedAt": 1782577611415,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1e",
+            "title": "Lokpal and Lokayuktas",
+            "done": true,
+            "completedAt": 1782577610039,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1f",
+            "title": "National Investigation Agency",
+            "done": true,
+            "completedAt": 1782577607900,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1g",
+            "title": "National Disaster Management Authority",
+            "done": true,
+            "completedAt": 1782577606538,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1h",
+            "title": "Bar Council of India",
+            "done": true,
+            "completedAt": 1782708841969,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1i",
+            "title": "Law Commission of India",
+            "done": true,
+            "completedAt": 1782708843834,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1j",
+            "title": "Delimitation Commission of India",
+            "done": true,
+            "completedAt": 1782708845534,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1k",
+            "title": "Co-operative Societies",
+            "done": true,
+            "completedAt": 1782708847266,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1l",
+            "title": "Official Language",
+            "done": true,
+            "completedAt": 1782708849820,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1m",
+            "title": "Public Services",
+            "done": true,
+            "completedAt": 1782708859499,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1n",
+            "title": "Rights and Liabilities of the Government",
+            "done": true,
+            "completedAt": 1782708857502,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1o",
+            "title": "Special Provisions Relating to Certain Classes",
+            "done": true,
+            "completedAt": 1782708855067,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1p",
+            "title": "Special Provisions for Some States",
+            "done": true,
+            "completedAt": 1782708853257,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1q",
+            "title": "Political Parties",
+            "done": true,
+            "completedAt": 1782711379678,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1r",
+            "title": "Role of Regional Parties",
+            "done": true,
+            "completedAt": 1782714582203,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1s",
+            "title": "Elections",
+            "done": true,
+            "completedAt": 1782714583629,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1t",
+            "title": "Election Laws",
+            "done": true,
+            "completedAt": 1782723572090,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1u",
+            "title": "Electoral Reforms",
+            "done": true,
+            "completedAt": 1782723570207,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1v",
+            "title": "Voting Behaviour",
+            "done": true,
+            "completedAt": 1782729317638,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1w",
+            "title": "Coalition Government",
+            "done": true,
+            "completedAt": 1782729316782,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1x",
+            "title": "Anti-Defection Law",
+            "done": true,
+            "completedAt": 1782729307771,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1y",
+            "title": "Pressure Groups",
+            "done": true,
+            "completedAt": 1782729307188,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh1z",
+            "title": "National Integration",
+            "done": true,
+            "completedAt": 1782729305355,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh20",
+            "title": "Foreign Policy",
+            "done": true,
+            "completedAt": 1782730707005,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh21",
+            "title": "National Commission to Review the Working of the Constitution",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh22",
+            "title": "Landmark Judgements and Their Impact",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh23",
+            "title": "Important Doctrines of Constitutional Interpretation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh24",
+            "title": "World Constitutions",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx7p",
+        "name": "Economy",
+        "emoji": "📈",
+        "order": 1,
+        "chapters": [
+          {
+            "id": "cmqw45ymh25",
+            "title": "Basic Key Concepts",
+            "done": true,
+            "completedAt": 1782577622865,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh26",
+            "title": "National Income",
+            "done": true,
+            "completedAt": 1782577622348,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh27",
+            "title": "Economic Growth vs Economic Development",
+            "done": true,
+            "completedAt": 1782577621648,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh28",
+            "title": "Poverty, Inequality and Unemployment",
+            "done": true,
+            "completedAt": 1782577620752,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7v",
+            "title": "Inflation",
+            "done": true,
+            "completedAt": 1782809055383,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh29",
+            "title": "Indian Tax Structure",
+            "done": true,
+            "completedAt": 1782888001432,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2a",
+            "title": "Public Finance",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2b",
+            "title": "Economic Planning in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmquq7wx7t",
+            "title": "Money and Banking",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmqw45ymh2c",
+            "title": "Financial Market",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2d",
+            "title": "Co-operative Sector in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2e",
+            "title": "Technology and Finance",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2f",
+            "title": "Agriculture and Allied Sectors",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2g",
+            "title": "Food Security and Food Management",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2h",
+            "title": "Land Reforms in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2i",
+            "title": "Irrigation in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2j",
+            "title": "Indian Industry",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2k",
+            "title": "MSME Sector",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2l",
+            "title": "Food Processing Industry in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2m",
+            "title": "Service Sector",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2n",
+            "title": "Infrastructure",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2o",
+            "title": "Health and Education",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2p",
+            "title": "Balance of Payments",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2q",
+            "title": "India’s Foreign Exchange and Foreign Trade",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2r",
+            "title": "International Economic Institutions",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2s",
+            "title": "Population and Demographic Dividend",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2t",
+            "title": "Skill Development",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2u",
+            "title": "Power and Energy Sector of India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2v",
+            "title": "Care Economy and Gender Transformative Approach in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2w",
+            "title": "Investment Models",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2x",
+            "title": "Sustainable Development and Climate Change",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx710",
+        "name": "Geography",
+        "emoji": "🌍",
+        "order": 2,
+        "chapters": [
+          {
+            "id": "cmqw45ymh2y",
+            "title": "Geography as a Discipline",
+            "done": true,
+            "completedAt": 1782577628766,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh2z",
+            "title": "The Origin and Evolution of the Earth",
+            "done": true,
+            "completedAt": 1782577628398,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh30",
+            "title": "Interior of the Earth",
+            "done": true,
+            "completedAt": 1782577627818,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh31",
+            "title": "Distribution of Oceans and Continents",
+            "done": true,
+            "completedAt": 1782797313346,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh32",
+            "title": "Geomorphic Processes",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh33",
+            "title": "Landforms and Their Evolution",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh34",
+            "title": "Composition and Structure of the Atmosphere",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh35",
+            "title": "Solar Radiation, Heat Balance and Temperature",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh36",
+            "title": "Atmospheric Circulation and Weather Systems",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh37",
+            "title": "Water in the Atmosphere",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh38",
+            "title": "World Climate and Climate Change",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh39",
+            "title": "Water (Oceans)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3a",
+            "title": "Movements of Ocean Water",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3b",
+            "title": "Biodiversity and Conservation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3c",
+            "title": "India – Location",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3d",
+            "title": "Structure and Physiography",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3e",
+            "title": "Drainage System",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3f",
+            "title": "Climate",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3g",
+            "title": "Natural Vegetation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3h",
+            "title": "Natural Hazards and Disasters",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3i",
+            "title": "Human Geography: Nature and Scope",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3j",
+            "title": "The World Population: Distribution, Density and Growth",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3k",
+            "title": "Human Development",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3l",
+            "title": "Primary Activities",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3m",
+            "title": "Secondary Activities",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3n",
+            "title": "Tertiary and Quaternary Activities",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3o",
+            "title": "Transport and Communication",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3p",
+            "title": "International Trade",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3q",
+            "title": "Population: Distribution, Density, Growth and Composition",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3r",
+            "title": "Human Settlements",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3s",
+            "title": "Land Resources and Agriculture",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3t",
+            "title": "Water Resources",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3u",
+            "title": "Mineral and Energy Resources",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3v",
+            "title": "Planning and Sustainable Development in Indian Context",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3w",
+            "title": "Transport and Communication (India)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3x",
+            "title": "International Trade (India)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh3y",
+            "title": "Geographical Perspective on Selected Issues and Problems",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx71b",
+        "name": "Environment",
+        "emoji": "🌱",
+        "order": 3,
+        "chapters": [
+          {
+            "id": "cmqw45ymh3z",
+            "title": "Environment, Habitat and Ecosystem",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh40",
+            "title": "Ecology – Principles and Organizations",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh41",
+            "title": "Functions of an Ecosystem – Succession and Homeostasis",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh42",
+            "title": "Functions of an Ecosystem – Trophic Levels",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh43",
+            "title": "Biogeochemical Cycling",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh44",
+            "title": "Wetland Ecosystem",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh45",
+            "title": "Natural Ecosystems or Biomes",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh46",
+            "title": "Biodiversity and Loss of Biodiversity",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh47",
+            "title": "Biodiversity Conservation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh48",
+            "title": "Wildlife Conservation Part I",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh49",
+            "title": "Wildlife Conservation Part II",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4a",
+            "title": "Air Pollution – Causes and Air Pollutants",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4b",
+            "title": "Air Pollution – Effects and Control Measures",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4c",
+            "title": "Water Pollution – Causes, Effects and Control Measures",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4d",
+            "title": "Plastic Pollution, Solid, Hazardous and E-Waste",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4e",
+            "title": "Highly Polluting Industries (HPIs)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4f",
+            "title": "Land Degradation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4g",
+            "title": "Climate Change and Greenhouse Gases (GHGs)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4h",
+            "title": "Climate Change Impacts and IPCC Reports",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4i",
+            "title": "Climate Change Mitigation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4j",
+            "title": "International Environmental Conventions and Laws – I",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4k",
+            "title": "International Environmental Conventions and Laws – II",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4l",
+            "title": "National Environmental Legislation – I",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4m",
+            "title": "National Environmental Legislation – Part II",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4n",
+            "title": "Green Revolution and Sustainable Agricultural Practices",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4o",
+            "title": "Energy Sources, Renewables and Energy Conservation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4p",
+            "title": "Water Conservation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4q",
+            "title": "Major Species and Invasive Species",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx71j",
+        "name": "Modern History",
+        "emoji": "🏛️",
+        "order": 4,
+        "chapters": [
+          {
+            "id": "cmqw45ymh4r",
+            "title": "Sources for the History of Modern India",
+            "done": true,
+            "completedAt": 1782577636830,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4s",
+            "title": "Major Approaches to the History of Modern India",
+            "done": true,
+            "completedAt": 1782577634351,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4t",
+            "title": "Advent of the Europeans in India",
+            "done": true,
+            "completedAt": 1782577636348,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4u",
+            "title": "India on the Eve of British Conquest",
+            "done": true,
+            "completedAt": 1782577635898,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4v",
+            "title": "Expansion and Consolidation of British Power in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4w",
+            "title": "People’s Resistance Against British Before 1857",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4x",
+            "title": "The Revolt of 1857",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4y",
+            "title": "Socio-Religious Reform Movements: General Features",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh4z",
+            "title": "A General Survey of Socio-Cultural Reform Movements",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh50",
+            "title": "Beginning of Modern Nationalism in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh51",
+            "title": "Indian National Congress: Foundation and the Moderate Phase",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh52",
+            "title": "Era of Militant Nationalism (1905–1909)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh53",
+            "title": "First Phase of Revolutionary Activities (1907–1917)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh54",
+            "title": "First World War and Nationalist Response",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh55",
+            "title": "Emergence of Gandhi",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh56",
+            "title": "Non-Cooperation Movement and Khilafat Andolan",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh57",
+            "title": "Emergence of Swarajists, Socialist Ideas, Revolutionary Activities and Other New Forces",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh58",
+            "title": "Simon Commission and the Nehru Report",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh59",
+            "title": "Civil Disobedience Movement and Round Table Conferences",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5a",
+            "title": "Debates on the Future Strategy after Civil Disobedience Movement",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5b",
+            "title": "Congress Rule in Provinces",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5c",
+            "title": "Nationalist Response in the Wake of World War II",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5d",
+            "title": "Quit India Movement, Demand for Pakistan, and the INA",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5e",
+            "title": "Post-War National Scenario",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5f",
+            "title": "Independence with Partition",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5g",
+            "title": "Constitutional, Administrative and Judicial Developments",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5h",
+            "title": "Survey of British Policies in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5i",
+            "title": "Economic Impact of British Rule in India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5j",
+            "title": "Development of Indian Press",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5k",
+            "title": "Development of Education",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5l",
+            "title": "Peasant Movements (1857–1947)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5m",
+            "title": "The Movement of the Working Class",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5n",
+            "title": "Challenges Before the New-born Nation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5o",
+            "title": "The Indian States",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5p",
+            "title": "Making of the Constitution for India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5q",
+            "title": "The Evolution of Nationalist Foreign Policy",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5r",
+            "title": "First General Elections",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          },
+          {
+            "id": "cmqw45ymh5s",
+            "title": "Developments under Nehru’s Leadership (1947–64)",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782549865097
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx71u",
+        "name": "Ancient History",
+        "emoji": "🗿",
+        "order": 5,
+        "chapters": []
+      },
+      {
+        "id": "cmquq7wx724",
+        "name": "Medieval History",
+        "emoji": "🕌",
+        "order": 6,
+        "chapters": []
+      },
+      {
+        "id": "cmquq7wx72c",
+        "name": "Art & Culture",
+        "emoji": "🎭",
+        "order": 7,
+        "chapters": []
+      },
+      {
+        "id": "cmquq7wx72m",
+        "name": "Science & Technology",
+        "emoji": "🔬",
+        "order": 8,
+        "chapters": []
+      },
+      {
+        "id": "cmquq7wx72u",
+        "name": "International Relations",
+        "emoji": "🌐",
+        "order": 9,
+        "chapters": [
+          {
+            "id": "cmquq7wx72v",
+            "title": "India's Foreign Policy",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx72w",
+            "title": "India & Neighbours",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx72x",
+            "title": "India & Major Powers",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx72y",
+            "title": "Groupings & Bilateral",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx72z",
+            "title": "International Organizations",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx730",
+            "title": "Global Issues",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx731",
+        "name": "Internal Security",
+        "emoji": "🛡️",
+        "order": 10,
+        "chapters": [
+          {
+            "id": "cmquq7wx732",
+            "title": "Terrorism",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx733",
+            "title": "Insurgency in NE",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx734",
+            "title": "Left Wing Extremism",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx735",
+            "title": "Cyber Security",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx736",
+            "title": "Money Laundering",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx737",
+            "title": "Border Management",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx738",
+            "title": "Security Forces & Agencies",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx739",
+            "title": "Disaster Management Basics",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx73a",
+        "name": "Disaster Management",
+        "emoji": "🌪️",
+        "order": 11,
+        "chapters": [
+          {
+            "id": "cmquq7wx73b",
+            "title": "Types of Disasters",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73c",
+            "title": "Disaster Management Cycle",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73d",
+            "title": "Institutional Framework",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73e",
+            "title": "Floods & Droughts",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73f",
+            "title": "Earthquakes & Landslides",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73g",
+            "title": "Cyclones",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx73h",
+        "name": "Agriculture",
+        "emoji": "🌾",
+        "order": 12,
+        "chapters": [
+          {
+            "id": "cmquq7wx73i",
+            "title": "Cropping Patterns",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73j",
+            "title": "Irrigation",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73k",
+            "title": "Agricultural Inputs",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73l",
+            "title": "Food Security",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73m",
+            "title": "Agricultural Marketing",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73n",
+            "title": "Animal Husbandry",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73o",
+            "title": "Government Schemes",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx73p",
+        "name": "Society",
+        "emoji": "👥",
+        "order": 13,
+        "chapters": [
+          {
+            "id": "cmquq7wx73q",
+            "title": "Salient Features of Indian Society",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73r",
+            "title": "Diversity",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73s",
+            "title": "Role of Women",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73t",
+            "title": "Population & Demographics",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73u",
+            "title": "Urbanization",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73v",
+            "title": "Globalization & Society",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73w",
+            "title": "Social Empowerment",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx73x",
+            "title": "Communalism & Regionalism",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx73y",
+        "name": "Ethics",
+        "emoji": "🧭",
+        "order": 14,
+        "chapters": [
+          {
+            "id": "cmquq7wx73z",
+            "title": "Ethics & Human Interface",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx740",
+            "title": "Attitude",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx741",
+            "title": "Aptitude & Foundational Values",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx742",
+            "title": "Emotional Intelligence",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx743",
+            "title": "Contributions of Thinkers",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx744",
+            "title": "Public/Civil Service Values",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx745",
+            "title": "Probity in Governance",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx746",
+            "title": "Case Studies",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx747",
+        "name": "Essay",
+        "emoji": "✍️",
+        "order": 15,
+        "chapters": [
+          {
+            "id": "cmquq7wx748",
+            "title": "Essay Structure & Approach",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx749",
+            "title": "Philosophical Essays",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74a",
+            "title": "Socio-Economic Essays",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74b",
+            "title": "Polity & Governance Essays",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74c",
+            "title": "Quotes & Practice",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      },
+      {
+        "id": "cmquq7wx74d",
+        "name": "Anthropology Optional",
+        "emoji": "🧬",
+        "order": 16,
+        "chapters": [
+          {
+            "id": "cmquq7wx74e",
+            "title": "Meaning & Scope",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74f",
+            "title": "Human Evolution",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74g",
+            "title": "Primates",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74h",
+            "title": "Physical Anthropology",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74i",
+            "title": "Archaeological Anthropology",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74j",
+            "title": "Social-Cultural Anthropology",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74k",
+            "title": "Kinship",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74l",
+            "title": "Marriage & Family",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74m",
+            "title": "Religion & Magic",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74n",
+            "title": "Economic Organization",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74o",
+            "title": "Political Organization",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74p",
+            "title": "Anthropological Theories",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74q",
+            "title": "Indian Anthropology",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74r",
+            "title": "Tribal India",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          },
+          {
+            "id": "cmquq7wx74s",
+            "title": "Applied Anthropology",
+            "done": false,
+            "completedAt": null,
+            "createdAt": 1782465975403
+          }
+        ]
+      }
+    ],
+    "upsc.mockSets": {},
+    "upsc.seedVersion": 2,
+    "upsc.revisionSets": {
+      "cmquq7wx78": {
+        "count": 2,
+        "lastDate": 1782455400000,
+        "nextDate": 1783665000000
+      },
+      "cmquq7wx77": {
+        "count": 1,
+        "lastDate": 1782455400000,
+        "nextDate": 1783665000000
+      },
+      "cmquq7wx76": {
+        "count": 1,
+        "lastDate": 1782455400000,
+        "nextDate": 1783665000000
+      }
+    },
+    "upsc.activity": {
+      "2026-06-26": 7,
+      "2026-06-27": 61,
+      "2026-06-29": 21,
+      "2026-06-30": 4,
+      "2026-07-01": 1
+    },
+    "upsc.theme": "dark",
+    "upsc.interviewNotes.tmqwkm4vugen": [],
+    "upsc.interviewTopics": [
+      {
+        "id": "tmqwkm4vugen",
+        "name": "General"
+      },
+      {
+        "id": "tmqyqz9k1gq4",
+        "name": "Y"
+      }
+    ],
+    "upsc.user": {
+      "name": "Adarsh",
+      "userId": "miniheros",
+      "remember": true,
+      "loginAt": 1782895691638
+    }
+  },
+  "exportedAt": 1782968729127
+}
